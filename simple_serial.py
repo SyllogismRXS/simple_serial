@@ -11,7 +11,7 @@ def send_command(ser, user_cmd, tx_eol, show_hidden_rx_chars):
     cmd = user_cmd.encode('utf-8') + tx_eol.encode('utf-8')
     ser.write(cmd)
 
-    sleep(0.5)
+    sleep(1.0)
 
     if show_hidden_rx_chars:
         return ser.readline()
